@@ -1,0 +1,140 @@
+Javascript ===> Programming
+    Data store
+    Operation
+    OOP ===> Code splatted
+    Communicate User 
+
+
+Java  Not ======= Javascript
+
+Javascript
+
+ES1, ES2 ,ES3
+
+2005 to  2015 ES5
+JQuery,JQuery UI, Angular JS
+
+Google ==> Node JS (2009)
+2015 ===> ECMA Script 6 (ES6)
+Angular IO
+React
+Vue
+
+******************** Learn *****************
+# Fundamentals
+# Function
+# Events
+# DOM
+# Create A simple calculator
+
+# JS Object
+    JS Object => collection key(property) and value
+    syntax = {}
+    use
+        var student = {
+            name:"Rahul",
+            age:21,
+            location:"Mumbai"
+        } JavaScript Object | JSON => Javascript Object Notation
+    read object 
+        student.name
+        student['age'];
+
+# Array
+    Array => collection key and values
+             key are auto-gen 
+             key always start with 0
+             by default key -1 ===>[]
+    syntax = []
+    use 
+        var student = ['Rahul',21,'Mumbai']
+    read am Array
+        student[0]
+
+# to store data ===> we use combination
+    array + object ==> ObjectArray | JSOn Array
+    syntax  => [{},{},{}]
+    use
+        studentList = [
+                            {
+                                name:"Rahul",
+                                age:21
+                            }
+                            ,{
+                                name:harita,
+                                age:20
+                            },{
+                                name:"Rohan",
+                                age:19
+                            },{
+                                name:"Deepak",
+                                age:31
+                            }
+                        ]
+    read the data
+        studentList[0].name
+
+# add looping (iteration) to array
+    array methods
+        array.map() => create a new array
+            return mapData
+        array.join() ==> convert array to string
+    syntax ==> 
+        arrayName.map(functionName)
+            functionName(value,index,array)
+        array.join()
+
+# Math 
+    Math.sqrt(49); ==> 7
+    Math.pow(3, 2); ==> 9
+    Math.ceil(4.5) ==> 5
+    Math.floor(4.5) ==> 4
+    Math.random() ==> 0 to 1
+
+# Date
+    Class  ==> Date()
+    var date = new Data()
+    # use 
+        var date = new Date(); 
+        output = date.getDate();
+        output = date.getFullYear();
+        output = date.getMonth() + 1;
+        output = date.getDay() + 1;
+
+        //time
+        output = date.toTimeString();
+        output = date.getHours(); // 24 hr
+        output = date.getMinutes();
+        output = date.getSeconds();
+       
+# Advance OF JS
+    Functions Types
+        # general function 
+        # expression function
+        # callback function
+        # IIFE
+        # arrow function 
+    OOP
+        Object Oriented Programming
+        Class ==>  collection or properties and methods
+        syntax 
+            method ==> running(){ // code }
+            properties ==> legs = 2
+
+        Object of class ==> 
+            * its a instance of a class
+            * we can all methods and properties of class
+
+    ES6    
+    Async 
+    LocalStorage
+
+# Node JS
+
+
+[{
+    completed: false
+    id: 1
+    title: "delectus aut autem"
+    userId: 1
+}]

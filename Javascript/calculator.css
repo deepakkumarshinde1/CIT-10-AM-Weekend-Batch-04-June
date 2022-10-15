@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.calculator {
+  width: 40vw;
+  background-color: gainsboro;
+  padding: 5px;
+  margin: auto;
+  margin-top: 40px;
+}
+.calculator p {
+  font-size: 20px;
+  text-align: right;
+  padding-right: 10px;
+  height: 16px;
+}
+
+.calculator input {
+  border: 0;
+  width: 100%;
+  padding: 4px;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.controls {
+  display: flex;
+  width: 100%;
+}
+
+.number {
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.number button {
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+.opt {
+  display: flex;
+  width: 40%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opt button {
+  width: inherit;
+  margin: 5px 0;
+}
