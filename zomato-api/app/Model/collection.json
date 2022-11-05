@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Breakfast",
+    "text": "Start your day with breakfast"
+  },
+  {
+    "name": "Lunch",
+    "text": "Best Lunch of today"
+  },
+  {
+    "name": "Dinner",
+    "text": "Have heathy dinner"
+  }
+]

@@ -1,0 +1,79 @@
+
+DB Commands
+    # see all database 
+    show dbs
+
+    # create or switch database
+    use dbName
+
+    # delete a database
+    db.dropDatabase()
+
+Collection Command
+    # create a collection 
+    db.createCollection('restaurant')
+
+    # view collection
+    show collections
+
+    # delete collection
+    db.collectionName.drop()
+
+Documents/Data Commands
+(CRUD operations)
+    # create/insert
+        # single insert
+           db.restaurant.insert({
+                 "name": "Hotel Taj",
+                 "min-cost": 399,
+                 "location": "mumbai"
+               })
+        # multi insert
+            db.restaurant.insertMany([{...},{...},{...}])
+
+    # read
+        db.restaurant.find(); ==> all find result
+        db.restaurant.find({location:'pune'},{name:1}) ==> specific result
+        db.restaurant.find(filter,projection)
+
+    # update
+        db.restaurant.updateMany({location:'mumbai'},{
+            $set:{
+                location:'new-mumbai'
+            }
+        })
+        
+        db.restaurant.updateMany({},{
+            $rename:{
+                location:'city'
+            }
+        })
+    # delete
+        db.restaurant.deleteOne({location:'pune'})
+        db.restaurant.deleteMany({location:'pune'})
+        db.restaurant.deleteMany({})
+
+Mongo DB stores a data in BSON (Binary JSON) format
+document support 
+    string
+    number
+    decimal
+    boolean
+    binary
+    array
+    object
+
+ObjectId (hex (16) value combination ==> 0,1,2,3,4,5,6,7,8,9,a,b,c,d,f
+ObjectId is Primary Key => Its unique and it not a null
+
+    "_id" : ObjectId("6365e039 58faaaa2a6 2f485d")
+    # ObjectId is auto gen.
+    # 12 bytes
+        # A 4-byte timestamp, representing the ObjectId's creation, measured in seconds since the Unix epoch
+          i.e 6365e039
+
+        # A 5-byte random value generated once per process. This random value is unique to the machine and process
+          i.e 58faaaa2a6
+
+        # A 3-byte incrementing counter, initialized to a random value
+            i.e 2f485d
