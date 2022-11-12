@@ -4,7 +4,10 @@
 // call express
 const createError = require("http-errors");
 const express = require("express");
+const mongoose = require("mongoose");
 const RouterAPI = require("./Routes/RouterAPI");
+const MONGODB_URI = "mongodb://127.0.0.1:27017/batch11zomato";
+const PORT = 4004;
 
 // create instance of express
 const app = express(); // server is created
@@ -35,7 +38,17 @@ app.use((error, request, response, next) => {
   });
 });
 // set a port number
-const PORT = 4004; // 3000 (react)
-app.listen(PORT, () => {
-  console.log("project is running on port ", PORT);
-});
+console.log("connecting to db ....");
+mongoose
+  .connect(MONGODB_URI)
+  .then(() => {
+    console.log("db connected successfully !!!");
+    app.listen(PORT, () => {
+      console.log("project is running on port ", PORT);
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+    // manually crash app
+    process.exit(1);
+  });

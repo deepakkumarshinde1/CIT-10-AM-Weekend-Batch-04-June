@@ -1,10 +1,18 @@
-// call a data from model
-let collectionData = require("../Model/collection.json");
+const CollectionModel = require("../Model/CollectionModel");
 
 // function
-module.exports.getCollectionData = (request, response) => {
-  response.status(200).send({
-    status: true,
-    collections: collectionData,
-  });
+module.exports.getCollectionData = async (request, response) => {
+  try {
+    // get a data
+    let result = await CollectionModel.find();
+    response.status(200).send({
+      status: true,
+      result,
+    });
+  } catch (error) {
+    response.status(500).send({
+      status: false,
+      error: error,
+    });
+  }
 };
